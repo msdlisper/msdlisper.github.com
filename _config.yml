@@ -11,3 +11,5 @@ github_username:  msdlisper
 twitter_username: msdlisper
 # Build settings
 markdown: kramdown
+
+theme: jekyll-theme-cayman
