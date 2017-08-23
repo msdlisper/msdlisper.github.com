@@ -16,11 +16,17 @@
 title: msdlisper
 email: whatabigbirl@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  前端开发-用户体验设计-音乐  目前就职于百度
+  前端开发-用户体验设计
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: msdlisper
 github_username:  msdlisper
+
+# Comment
+# comment:
+disqus: 
+  shortname: zhangpeng
+
 
 # Build settings
 markdown: kramdown
@@ -40,6 +46,3 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# Comment
-comment:
-    disqus: zhangpeng
