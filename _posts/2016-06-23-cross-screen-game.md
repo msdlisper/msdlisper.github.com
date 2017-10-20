@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "移动端h5自适应问题"
+title:  "跨屏游戏的实现"
 date:   2016-06-23 13:45:25
 categories: game 
 ---
