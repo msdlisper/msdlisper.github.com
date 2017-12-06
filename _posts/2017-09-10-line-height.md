@@ -54,6 +54,20 @@ The baseline of an 'inline-block' is the baseline of its last line box in the no
     - 用font-size: 0来间接设置line-height,line-height是一个相对单位(相对于内联元素), font-size为0, line-height也为0
 [示例](http://jsbin.com/vivewamusu/2/edit?html,output)
 
+## 居中对齐
+- 一个div里的字体怎么上下居中?
+    
+    block元素设inline-height, inline不设置
+    (最好也把inline-height = height 设height的目的是保证内联元素为空是,高度也撑开)
+    不会绝对对齐, 应为inline元素会以baseline为齐, baseline并不可靠 (ant mobile是这么干的[ant](https://mobile.ant.design/components/button-cn/))
+    [示例](http://jsbin.com/nubeviwasa/3/edit?html,output)
+
+    baseline不可靠, 可以让它变的可靠: block元素font-size: 0; 让baseline, text-top, text-bottom重合, 并在block元素的中央
+    优点: 不用设多余的margin,padding, 以后字变大点, div变高点都不用修改其它地方
+    缺点是: div内的所有字体要手动设置
+    [示例](http://jsbin.com/nubeviwasa/4/edit?html,output)
+
+ 
 
 ## 最后 Vertical-Align Demystified
 - 如果在内联元素里遇到问题, 来问两个问题
