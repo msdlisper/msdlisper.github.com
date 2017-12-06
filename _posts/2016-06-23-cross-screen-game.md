@@ -2,8 +2,14 @@
 layout: post
 title:  "跨屏游戏的实现"
 date:   2016-06-23 13:45:25
-categories: game 
+categories: project
+tags: game 跨屏 
 ---
+
+* content
+{:toc}
+
+
 
 ## 简介
 

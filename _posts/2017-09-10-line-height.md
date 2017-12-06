@@ -2,8 +2,15 @@
 layout: post
 title:  "内联元素的一些总结"
 date:   2017-08-10 19:55:21
-categories: it css
+categories: learn
+tags: problem css
 ---
+
+* content
+{:toc}
+
+
+
 
 # 前言
 想研究下line-height, vertical-align, 因为平时项目经常用, 有时侯用的比较糊涂, 找到文档细细研究
