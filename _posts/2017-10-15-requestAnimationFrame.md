@@ -19,6 +19,7 @@ tags: webApi problem
 ## 怎么解决?
 - 通过requestAnimationFrame api来控制repaint的时机
 - 这个是https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame上面的例子, 我稍微改了下
+
 ```
 var start = null;
 var element = document.getElementById('Specification');
@@ -39,6 +40,7 @@ window.requestAnimationFrame(step);
 如果想在下一帧继续执行另一个动画, 需要在回调里继续调用requestAnimationFrame, 有点像flash的动画脚本, 保证从这一帧到下一帧之间不做多余的渲染
 
 文档里是这么说的
+
 ```
 the window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint.
 ```
