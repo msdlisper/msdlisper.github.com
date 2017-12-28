@@ -35,7 +35,7 @@ function step(timestamp) {
 window.requestAnimationFrame(step);
 ```
 
-如果没有window.requestAnimationFrame, 到element.style.position = 'absolute';这一句就会重绘
+如果没有window.requestAnimationFrame, 到element.style.position = 'absolute';这一句就会重绘, 但上面这么写, 会先element.style.left = 200 + 'px';然后才是element.style.position = 'absolute'; 然后才是重绘 
 
 如果想在下一帧继续执行另一个动画, 需要在回调里继续调用requestAnimationFrame, 有点像flash的动画脚本, 保证从这一帧到下一帧之间不做多余的渲染
 
