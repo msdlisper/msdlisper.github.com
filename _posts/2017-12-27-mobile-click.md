@@ -48,12 +48,13 @@ tags:  h5
 <meta name="viewport" content="width=device-width">
 
 ```
+
 - 原理: iPhone 诞生时就有的另一个约定是, 在渲染桌面端站点的时候, 使用 980 像素的视口宽度,而非设备本身的宽度(iPhone 是 320 像素宽), 上面代码告诉浏览器将视口大小设为设备本身的尺寸, 然后在 **Chrome 32 这一版中, 他们将在包含 width=device-width 或者置为比 viewport 值更小的页面上禁用双击缩放**, 没有必要双击, 就没有延迟了
 - 支持情况: 自 Chrome 32 开始, FF,IE/Edge 也随后支持了; 2016 年 3 月,IOS **9.3** 开始支持。 
 
-  > 该方案的"禁止双击缩放"是遵守的[规则](https://trac.webkit.org/changeset/191644/webkit)
-  > - 当页面设置了视窗宽度且是初始尺寸(页面未缩放), 双击缩放才是被禁止的
-  > - 为了让用户结束后仍然能fast-click, 缩小时,只能缩小到初始尺寸, 不是最小尺寸
+> 该方案的"禁止双击缩放"是遵守的[规则](https://trac.webkit.org/changeset/191644/webkit)
+> - 当页面设置了视窗宽度且是初始尺寸(页面未缩放), 双击缩放才是被禁止的
+> - 为了让用户结束后仍然能fast-click, 缩小时,只能缩小到初始尺寸, 不是最小尺寸
 
 - 为什么不直接使用方案二?
     - 可以看看ant-disign的使用
