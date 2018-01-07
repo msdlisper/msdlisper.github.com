@@ -21,7 +21,7 @@ type: page
 * GitHub：[msdlisper](https://github.com/msdlisper)
 * email：whatabigbirl@gmail.com
 <!-- * [知乎](https://www.zhihu.com/people/msdlisper) -->
-* [Twitter](https://twitter.com/msdlisper126)
+
 
 
 
