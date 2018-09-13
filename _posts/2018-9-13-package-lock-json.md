@@ -42,7 +42,8 @@ package-lock.json :
    },
 ```
 1.7.2版本的react-scroll与1.6.7出现了api不兼容的情况, 导致了代码崩溃.
-小王开始怀疑人生, 思考是不是可以做点什么...
+
+小王开始怀疑人生, 思考是不是可以做点什么了...
 
 #### 继承无辜的小明的项目
 小明一如既往的愉快码代码....直到有一天, pm说, 我们项目上线吧, 于是小明在本地测妥了后就happly提上线单了, 于是, 线上就崩了, 小明百思不得其姐, 为啥本地打包处理没有问题, 线上就出问题了???? 被pm折磨后, 小明选择了回滚..
@@ -138,6 +139,20 @@ npm@5.3.0没有reinstall时, 无视lock文件
 >  I support this. And I'm going to delete my previous comment because it's noise.
 
 似乎还改过口...
+
+[issue21122](https://github.com/npm/npm/issues/21122#issuecomment-401634412)
+
+同样的问题
+
+>If one has to specify exact versions in package.json as some seem to suggest on reddit/SO/etc, then what is the point of package-lock.json?
+
+> Try yarn or pnpm, npm unfortunately does not treat the lockfile as the single source of truth.
+
+这哥子直接建议用yarn..
+
+类似的问题在issue里还有很多
+
+
 
 [stackoverflow的讨论](https://stackoverflow.com/questions/45022048/why-does-npm-install-rewrite-package-lock-json)
 
