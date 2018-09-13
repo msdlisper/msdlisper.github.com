@@ -206,6 +206,27 @@ npm@5.3.0没有reinstall时, 无视lock文件
 
 然后npm i, npm 默认的registry是a.com 那一定安装不了xxxxb , yarn没有这个问题
 
+但注意, 使用yarn时, 必须保证,你使用的registry能在ci环境访问, 因为*yarn install 会完全根据你的yarn.lock里的源和version来安装*
+
+## 我们团队的实践
+
+- 统一本地的node版本, 与ci保持一致
+- 统一使用registry
+    + npm config set registry http://registry.npm.xiaojukeji.com/
+- 一定提交lockfile(package-lock.json/yarn.lock)
+- 锁定package.json里的包
+    + 新代码安装是使用 `-E` 参数, 会写死版本号
+        * npm i xx -E
+    + 老代码去掉 `^ ~ < > *`等符号, 在npm@5.x可以依次执行
+        * rm -rf node_modules && rm package-lock.json
+        * npm outdated 查看可以更新的包
+        * npm update
+        * 手动去掉package.json里的所有^
+        * npm i 
+        * 验证项目
+        * git commit -am 'lock package'
+- 如有特殊需要, 可以使用yarn
+
 
 
 
