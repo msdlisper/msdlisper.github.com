@@ -151,6 +151,7 @@ npm@5.3.0没有reinstall时, 无视lock文件
 
 在实际项目里, 以下几点是我总结出的最佳实践
 
+- 一定要提交lockfile, 不然ci环境下就真的和你开发环境依赖的版本不一样了
 - 保证同一开发项目团队使用的node/npm的版本一致, 并且也与ci环境版本保持一致
     + [踩过坑的同学](https://juejin.im/post/5b6908ba6fb9a04f9c43e7b8)
     + npm@5以下都没有package-lock.json...
@@ -163,8 +164,10 @@ npm@5.3.0没有reinstall时, 无视lock文件
     + 如果package.json和package-lock.json不能对应, 会报错, 但不改变package-lock.json
     + npm ci 会先删除node_modules
     + 任何情况下不会更改package.json或package-lock.json
-- 锁定你的版本号, 预发因为semver版本导致package-lock.json失效
+- 锁定你的package.json依赖的版本号(不用^,~这样的符合), 预发因为semver版本导致package-lock.json失效
     + 以前遇到这个问题, 是这样做的, 检验是可行的
+    + 保险起见, 万一npm某个版本没有锁住第一层的依赖的版本呢?
+
 可以考虑yarn, 如果你的ci的环境没有npm@5.7.0, 保证你在ci环境完全还原开发的是指定的版本. 就像`npm ci`. 如果你的package-lock.json里面 有一个包在另一个源里, npm i 一定是安装不了, 比如package-lock.json是这种:
 
 ```
