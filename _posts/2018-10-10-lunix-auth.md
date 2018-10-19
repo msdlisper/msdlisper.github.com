@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "lunix的权限系统"
+title:  "linux的权限系统"
 date:   2018-10-10 09:19:00
 categories: learn 
 tags:  linux auth
@@ -28,7 +28,7 @@ linux的权限管理, 群组概念
     + `groupadd quickPass`
 - 创建用户, 给出初始密码和指定有效用户组
     + `useradd -G quickPass pro1`
-    + `useradd -G quickPass pro2`
+    + `useradd -G quickPass pro2```
     + `useradd -G quickPass pro3`
     + `echo "0000" | passwd --stdin pro1`
     + `echo "0000" | passwd --stdin pro2`
@@ -193,9 +193,9 @@ linux的权限管理, 群组概念
     + 修改? /etc/group, /etc/passwd都没改变
     + 怎样做到的: 另外以一个 shell 来提供这个功能,新的 shell 给user5的有效GID是user4, 可以exit退出此功能
 
-## finger
+### finger
 - 查看有哪些用户登录了, 以及查看具体的用户信息
 
-## id
+### id
 - 看uid, gid, 有效组的id
 
